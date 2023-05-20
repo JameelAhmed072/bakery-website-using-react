@@ -1,38 +1,259 @@
-.App {
+
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.image-container img {
+  width: 30%;
+  margin: 10px;
+}
+.card-img-top{
+  height: auto;
+  max-height: 250px;
+  width: auto;
+  max-width: 250px;
+}
+.welcome{
+  text-align: center;
+  margin-top: 5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* text-decoration:line-through; */
+  font-style: italic;
+  /* text-decoration-color: rgb(102, 202, 9); */
+  color: rgb(177, 7, 44);
+}
+.upperline{
+  color: chocolate;
+  text-align:center;
+  font-family:fantasy
+}
+.products{
+  text-align: left;
+  font-weight: 900;
+  color: chocolate;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 2rem;
+  padding-left: 3rem;
+}
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item:hover .nav-link{ color: #4700ca;  }
+	.navbar .nav-item:hover { transition: 1s; opacity:1; visibility:visible;}
+}
+.blur-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blurry-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* filter: blur(1px); */
+  border-radius: 20px;
+}
+
+.blurry-image-container {
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+
+.centered-text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.centered-text p {
+  display: inline-block;
+  text-align: center;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* font-size: 1rem; */
+}
+
+@media (max-width: 768px) {
+  .centered-text {
+    font-size: 1rem;
+  }
+}
+ /* footer section css */
+
+ .footer {
+  background-color: #a86b6b5d;
+  padding: 30px 0;
+  border-radius: 20px;
+
+}
+
+.footer h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-info li i {
+  margin-right: 10px;
+  color: #f39c12;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.social-links li:last-child {
+  margin-right: 0;
+}
+
+.social-links a i {
+  font-size: 24px;
+  color: #333;
+}
+
+
+/* latest reviews */
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.card {
+  /* width: 200px; */
+  height: 200px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 20px; /* add margin-right to create spacing */
+}
+.card:last-child {
+  margin-right: 0; /* remove margin-right on last card */
+}
+
+
+/* developers */
+.page-section {
+  padding: 6rem 0;
+}
+.page-section h2.section-heading, .page-section .section-heading.h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.page-section h3.section-subheading, .page-section .section-subheading.h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 4rem;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.page-section h3.section-subheading, .page-section .section-subheading.h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 4rem;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.team-member {
+  margin-bottom: 3rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.team-member img {
+  width: 14rem;
+  height: 14rem;
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+}
+.team-member h4, .team-member .h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #6c757d !important;
+}
+
+.col-lg-8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+.col-lg-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+
+
+
+.card-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 576px) {
+  .card-container {
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .card {
+    margin: 0 10px 20px 10px;
   }
 }
